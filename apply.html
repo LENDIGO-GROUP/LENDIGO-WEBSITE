@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel='stylesheet' href='style.css'>
+<title>LENDIGO</title>
+<script>
+function submitLoanForm() {
+  var name = document.getElementById('name').value;
+  var phone = document.getElementById('phone').value;
+  var email = document.getElementById('email').value;
+  var type = document.getElementById('type').value;
+  var amount = document.getElementById('amount').value;
+
+  var msg = 'New Loan Application:%0A' +
+            'Name: ' + name + '%0A' +
+            'Phone: ' + phone + '%0A' +
+            'Email: ' + email + '%0A' +
+            'Loan Type: ' + type + '%0A' +
+            'Amount: ' + amount;
+
+  window.open('mailto:mn.wewoolefinancialservices@gmail.com?subject=New Loan Application&body=' + msg);
+  window.open('https://wa.me/256704679882?text=' + msg);
+  alert('Your application has been submitted!');
+}
+</script>
+</head>
+<body>
+<header>
+    <img src='logo.JPG' class='logo'>
+    <nav>
+        <a href='index.html'>Home</a>
+        <a href='products.html'>Products</a>
+        <a href='apply.html'>Apply</a>
+        <a href='about.html'>About</a>
+        <a href='contact.html'>Contact</a>
+    </nav>
+</header>
+
+<h1>Apply for a Loan</h1>
+<form class='apply-form' onsubmit='event.preventDefault();submitLoanForm();'>
+<label>Name</label><input id='name' type='text' required>
+<label>Phone</label><input id='phone' type='text' required>
+<label>Email</label><input id='email' type='email'>
+<label>Loan Type</label>
+<select id='type' required>
+<option>Salary Loans</option>
+<option>Logbook Loans</option>
+<option>LPO Financing</option>
+<option>Business Loans</option>
+<option>Personal Loans</option>
+<option>Study Loans</option>
+</select>
+<label>Amount</label><input id='amount' type='number' required>
+<button class='btn'>Submit</button>
+</form>
+
+
+<div class='fab-container'>
+    <a class='fab whatsapp' href='https://wa.me/256704679882?text=Hello%20LENDIGO' target='_blank'>
+        <img src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'>
+    </a>
+    <a class='fab call' href='tel:+256704679882'>
+        <img src='https://cdn-icons-png.flaticon.com/512/597/597177.png'>
+    </a>
+    <a class='fab email' href='mailto:mn.wewoolefinancialservices@gmail.com?subject=Loan%20Inquiry'>
+        <img src='https://cdn-icons-png.flaticon.com/512/561/561127.png'>
+    </a>
+</div>
+
+</body>
+</html>
