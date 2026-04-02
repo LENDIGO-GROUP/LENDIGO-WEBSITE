@@ -1,6 +1,26 @@
 
 body{margin:0;font-family:'Poppins',sans-serif;background:#eef4fa;}
 header{background:#00558C;padding:10px;display:flex;align-items:center;}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "LENDIGO",
+  "url": "https://lendigo-group.github.io/",
+  "logo": "https://lendigo-group.github.io/logo.JPG",
+  "description": "LENDIGO offers reliable and fast financial solutions including salary loans, business loans, logbook loans, study loans and LPO financing in Uganda.",
+  "telephone": "+256704679882",
+  "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kampala, Uganda",
+      "addressLocality": "Kampala",
+      "addressCountry": "UG"
+  },
+  "openingHours": "Mo-Fr 08:00-17:00"
+}
+</script>
+
 nav a{color:white;margin:0 10px;text-decoration:none;font-weight:600;}
 .logo-circle{width:65px;height:65px;border-radius:50%;object-fit:cover;border:3px solid white;}
 .hero-modern{background:linear-gradient(135deg,#00558C,#003366);padding:40px 10px;min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;}
