@@ -103,3 +103,54 @@
   </div>
 
 </section>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  var name = document.getElementById("cname").value.trim();
+  var phone = document.getElementById("cphone").value.trim();
+  var email = document.getElementById("cemail").value.trim();
+  var message = document.getElementById("cmessage").value.trim();
+
+  var msgBox = document.getElementById("formMsg");
+
+  // ✅ Simple validation
+  if(name.length < 3){
+    msgBox.style.color = "red";
+    msgBox.innerHTML = "Please enter a valid name.";
+    return;
+  }
+
+  if(phone.length < 10){
+    msgBox.style.color = "red";
+    msgBox.innerHTML = "Please enter a valid phone number.";
+    return;
+  }
+
+  if(!email.includes("@")){
+    msgBox.style.color = "red";
+    msgBox.innerHTML = "Please enter a valid email address.";
+    return;
+  }
+
+  if(message.length < 5){
+    msgBox.style.color = "red";
+    msgBox.innerHTML = "Message is too short.";
+    return;
+  }
+
+  // ✅ Success
+  msgBox.style.color = "green";
+  msgBox.innerHTML = "Message ready to send! Choose option below.";
+
+  // ✅ Open WhatsApp with message
+  var text = "Contact Request:%0AName: " + name +
+             "%0APhone: " + phone +
+             "%0AEmail: " + email +
+             "%0AMessage: " + message;
+
+  window.open("https://wa.me/256704679882?text=" + text, "_blank");
+
+});
+</script>
