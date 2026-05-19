@@ -136,3 +136,21 @@ input:focus, textarea:focus {
     max-width: 100% !important;
   }
 }
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 8px;
+    font-size: 14px;
+  }
+}
+
+.cta-button, button {
+  padding: 12px 18px;
+  font-size: 16px;
+}
