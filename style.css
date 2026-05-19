@@ -173,3 +173,8 @@ h1, h2 {
 p {
   padding: 5px 10px;
 }
+
+.fab-container {
+  bottom: 15px;
+  right: 15px;
+}
