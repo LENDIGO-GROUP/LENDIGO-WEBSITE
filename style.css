@@ -1,4 +1,79 @@
 
+<!-- ✅ LOADING SCREEN -->
+<div id="loader" style="
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+">
+  <div style="
+    width:50px;
+    height:50px;
+    border:5px solid #eee;
+    border-top:5px solid #2e7d32;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+  "></div>
+</div>
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+<script>
+window.addEventListener("load", function(){
+  document.getElementById("loader").style.display = "none";
+});
+</script>
+
+<!-- ✅ SUCCESS MODAL -->
+<div id="successModal" style="
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+">
+
+  <div style="
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    max-width:350px;
+  ">
+    <h2 style="color:#2e7d32;">✅ Success</h2>
+    <p>Your message has been received.</p>
+    <button onclick="closeSuccess()" style="
+      background:#2e7d32;
+      color:#fff;
+      padding:10px;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+    ">Close</button>
+  </div>
+
+</div>
+
+function showSuccess(){
+  document.getElementById("successModal").style.display = "flex";
+}
+
+function closeSuccess(){
+  document.getElementById("successModal").style.display = "none";
+}
+
 body{margin:0;font-family:'Poppins',sans-serif;background:#eef4fa;}
 header{background:#00558C;padding:10px;display:flex;align-items:center;}
 nav a{color:white;margin:0 10px;text-decoration:none;font-weight:600;}
