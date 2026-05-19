@@ -120,3 +120,19 @@ input, textarea {
 input:focus, textarea:focus {
   border-color:#2e7d32;
 }
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  section img {
+    width: 90% !important;
+    margin-top: 20px;
+  }
+
+  section div {
+    max-width: 100% !important;
+  }
+}
