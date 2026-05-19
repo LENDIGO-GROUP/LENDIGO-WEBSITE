@@ -178,3 +178,8 @@ p {
   bottom: 15px;
   right: 15px;
 }
+
+.logo {
+  width: 120px;
+  height: auto;
+}
