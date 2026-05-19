@@ -12,3 +12,36 @@ nav a{color:white;margin:0 10px;text-decoration:none;font-weight:600;}
 .fab-container{position:fixed;bottom:25px;right:25px;display:flex;flex-direction:column;gap:10px;z-index:999;}
 .fab{width:55px;height:55px;border-radius:50%;display:flex;justify-content:center;align-items:center;box-shadow:0 3px 10px rgba(0,0,0,.3);} .whatsapp{background:#25D366;} .call{background:#00558C;} .email{background:#6CB33F;} .fab img{width:28px;}
 .fade-in{opacity:0;animation:fadeIn 1.2s forwards;} @keyframes fadeIn{to{opacity:1;}}
+
+body {
+  font-family: Arial, sans-serif;
+  background:#f7f9fb;
+  margin:0;
+  color:#333;
+}
+
+header {
+  background:#ffffff;
+  padding:15px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+nav a {
+  margin:0 10px;
+  text-decoration:none;
+  color:#2e7d32;
+  font-weight:600;
+}
+
+input, textarea {
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:1px solid #ddd;
+  border-radius:8px;
+  outline:none;
+}
+
+input:focus, textarea:focus {
+  border-color:#2e7d32;
+}
